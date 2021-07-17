@@ -1,4 +1,5 @@
 import React from "react";
+import llogo from "../data/learnabilitylogowhite.png";
 import { Menu, Button } from "antd";
 import {
   UserOutlined,
@@ -20,6 +21,18 @@ function SideBar() {
           style={{ height: "100%" }}
           //   inlineCollapsed={this.state.collapsed}
         >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            {" "}
+            <img src={llogo} alt="Logo" style={{ width: "75%" }} />
+          </div>
           <Menu.Item key="1" icon={<HomeOutlined />}>
             Home
           </Menu.Item>
