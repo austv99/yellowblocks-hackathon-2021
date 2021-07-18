@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Tabs, Input, Form, Button } from 'antd';
+import { Tabs, Input, Form, Button, Comment, Avatar } from 'antd';
 import { AppContext } from '../utils/context'; 
+import teacher from "../data/teacher.jpeg";
+
 
 
 const { TabPane } = Tabs;
@@ -20,6 +22,7 @@ function CommentSection({ comments }) {
     const handleSubmit = (values) => {
         const { comment } = values
         const obj = {
+            author: 'Ms May',
             text: comment,
         }
         setStudent((prevStudent) => ({
@@ -42,18 +45,63 @@ function CommentSection({ comments }) {
             <Tabs defaultActiveKey="1" onChange={handleTabChange}>
                 <TabPane tab="Teacher" key="1">
                     {comments.teacher.map((c) => (
-                        <p>{c.text}</p>
+                         <Comment
+                        //  actions={[<span key="comment-nested-reply-to">Reply to</span>]}
+                         author={<a>{c.author}</a>}
+                         avatar={
+                           <Avatar
+                             src={teacher}
+                             alt={c.author}
+                           />
+                         }
+                         content={
+                           <p>
+                             {c.text}
+                           </p>
+                         }
+                       >
+                        </Comment>
                     ))}
                 </TabPane>
                 <TabPane tab="Specialist" key="2">
                     {comments.specialist.map((c) => (
-                        <p>{c.text}</p>
+                         <Comment
+                         actions={[<span key="comment-nested-reply-to">Reply to</span>]}
+                         author={<a>{c.author}</a>}
+                         avatar={
+                           <Avatar
+                             src="./avatar.png"
+                             alt={c.author}
+                           />
+                         }
+                         content={
+                           <p>
+                             {c.text}
+                           </p>
+                         }
+                       >
+                        </Comment>
                     ))}
                 </TabPane>
                 <TabPane tab="Parent" key="3">
                     {comments.parent.map((c) => (
-                        <p>{c.text}</p>
-                    ))}
+                         <Comment
+                         actions={[<span key="comment-nested-reply-to">Reply to</span>]}
+                         author={<a>{c.author}</a>}
+                         avatar={
+                           <Avatar
+                             src="./avatar.png"
+                             alt={c.author}
+                           />
+                         }
+                         content={
+                           <p>
+                             {c.text}
+                           </p>
+                         }
+                       >
+                        </Comment>
+                    ))} 
                 </TabPane>
             </Tabs>
             <Form onFinish={handleSubmit}>

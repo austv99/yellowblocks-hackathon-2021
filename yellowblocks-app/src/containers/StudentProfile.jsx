@@ -40,16 +40,19 @@ const strategies = [
 const comments = {
   parent: [
     {
+      author: "Jenny Smith",
       text: "Parent Lorem Ipsum",
     },
   ],
   teacher: [
     {
+      author: "Ms May",
       text: "Teacher Lorem Ipsum",
     },
   ],
   specialist: [
     {
+      author: "Kevin Tran",
       text: "Specialist Lorem Ipsum",
     },
   ],
