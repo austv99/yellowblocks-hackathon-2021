@@ -18,7 +18,7 @@ function SideBar() {
           defaultOpenKeys={["sub1"]}
           mode="inline"
           theme="dark"
-          style={{ height: "100%" }}
+          style={{ minHeight: "100vh", height: "100%" }}
           //   inlineCollapsed={this.state.collapsed}
         >
           <div

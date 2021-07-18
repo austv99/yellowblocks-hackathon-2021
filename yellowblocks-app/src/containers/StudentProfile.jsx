@@ -1,10 +1,11 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import SideBar from "../components/SideBar";
 import NavBar from "../components/NavBar";
 import AvatarUser from "../components/AvatarUser";
 import Breadcrumbs from "../components/BreadCrumbs";
 import { Button, Avatar, Space } from "antd";
-import { BookOutlined } from "@ant-design/icons";
+import { BookOutlined, BarChartOutlined } from "@ant-design/icons";
 import UserDetails from "../components/UserDetails";
 import ProgressBars from "../components/ProgressBars";
 import TeachingStrategies from "../components/TeachingStrategies";
@@ -15,7 +16,7 @@ import fakekid from "../data/fakekid.jpeg";
 const progress = [
   {
     name: "Concentration",
-    progress: 50,
+    progress: 38,
   },
   {
     name: "Problem Solving",
@@ -24,6 +25,14 @@ const progress = [
   {
     name: "Speaking",
     progress: 75,
+  },
+  {
+    name: "Behaviour",
+    progress: 45,
+  },
+  {
+    name: "Sociability",
+    progress: 30,
   },
 ];
 const strategies = [
@@ -109,10 +118,18 @@ function StudentProfile() {
             }}
           >
             <Breadcrumbs navs={navs} />
-            <Button>
-              <BookOutlined />
-              Evaluation Log
-            </Button>
+            <Space>
+              <Button>
+                <BookOutlined />
+                Evaluation Log
+              </Button>
+              <Link to="/skillsprogress">
+                <Button>
+                  <BarChartOutlined />
+                  Skills Progress
+                </Button>
+              </Link>
+            </Space>
           </div>
           {student && (
             <>
@@ -121,9 +138,10 @@ function StudentProfile() {
                   display: "flex",
                   justifyContent: "space-between",
                   paddingBottom: "10px",
+                  marginBottom: "20px",
                 }}
               >
-                <div style={{ display: "flex" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
                   <img
                     src={fakekid}
                     alt="Profile Picture"
@@ -138,6 +156,7 @@ function StudentProfile() {
                 </div>
                 <ProgressBars progress={student.progress} />
               </div>
+
               <Space size="large" direction="vertical">
                 <StatsCards stats={student.stats} />
                 <TeachingStrategies strategies={student.strategies} />
