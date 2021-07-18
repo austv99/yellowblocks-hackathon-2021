@@ -61,6 +61,8 @@ const stats = {
 }
 
 
+
+
 function StudentProfile () {
     const navs = ['Student Profile', 'Joel Smith']
     const context = useContext(AppContext)

@@ -12,8 +12,8 @@ function AddEvalForm({ modalState }) {
     const [behaveRating, setBehaveRating] = useState(0);
     const [socRating, setSocRating] = useState(0);
     const context = useContext(AppContext)
-    const { studentContext } = context
-    const { student, setStudent } = studentContext
+    const { evalContext } = context
+    const { evals, setEvals } = evalContext
     const handleSubmit = (values) => {
         const {concRating, concComment,
             probRating, probComment,
@@ -21,17 +21,18 @@ function AddEvalForm({ modalState }) {
             behaveRating, behaveComment,
             socRating, socComment,
             overallComment} = values
-        setStudent((prevStudent) => ({
-            ...prevStudent,
-            evals: [...prevStudent.evals, {
+        setEvals((prevEval) => ([
+            ...prevEval,
+            {
+                date: 'September 2021', 
                 concRating, concComment,
                 probRating, probComment,
                 speakRating, speakComment,
                 behaveRating, behaveComment,
                 socRating, socComment,
                 overallComment,
-            }]
-        }))
+            }
+        ]))
         modalState(false)
     }
 

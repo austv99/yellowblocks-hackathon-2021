@@ -1,7 +1,7 @@
 import React from 'react';
 import { Rate } from 'antd';
 
-function Evaluation(evals) {
+function Evaluation() {
     return (
       <>
           <div>
