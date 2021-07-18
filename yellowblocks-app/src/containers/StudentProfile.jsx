@@ -56,9 +56,13 @@ const comments = {
 };
 
 const stats = {
-  strengths: ["Strengths LoremIpsum"],
-  weaknesses: ["Weaknesses LoremIpsum"],
-  interests: ["Interests LoremIpsum"],
+  strengths: ["Picks up work easily", "Great working with pictures"],
+  weaknesses: [
+    "A break every 20 minutes",
+    "Encouragement to ask for help",
+    "Work with his friend James Wu if possible",
+  ],
+  interests: ["Loves Ben10", "Likes working with a helper"],
 };
 
 function StudentProfile() {

@@ -11,21 +11,21 @@ function StatsCards({ stats }) {
           justifyContent: "space-between",
         }}
       >
-        <Card title="Strengths" style={{ width: "33%" }}>
+        <Card title="💪 Strengths" style={{ width: "33%" }}>
           <ul>
             {stats.strengths.map((s) => (
               <li>{s}</li>
             ))}
           </ul>
         </Card>
-        <Card title="Challenges" style={{ width: "33%" }}>
+        <Card title="✋ Needs" style={{ width: "33%" }}>
           <ul>
             {stats.weaknesses.map((s) => (
               <li>{s}</li>
             ))}
           </ul>
         </Card>
-        <Card title="Interests" style={{ width: "33%" }}>
+        <Card title="✨ Interests" style={{ width: "33%" }}>
           <ul>
             {stats.interests.map((s) => (
               <li>{s}</li>
