@@ -4,6 +4,7 @@ import Landing from "./containers/Landing";
 import StudentProfile from "./containers/StudentProfile";
 import Context, { AppContext } from "./utils/context";
 import SkillsProgress from "./containers/SkillsProgress";
+import EvaluationLogs from "./containers/EvaluationLog";
 function App() {
   const context = Context();
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/skillsprogress">
             <SkillsProgress />
+          </Route>
+          <Route exact path="/evaluation">
+            <EvaluationLogs />
           </Route>
         </Switch>
       </Router>

@@ -123,10 +123,12 @@ function StudentProfile() {
           >
             <Breadcrumbs navs={navs} />
             <Space>
-              <Button>
-                <BookOutlined />
-                Evaluation Log
-              </Button>
+              <Link to="/evaluation">
+                <Button>
+                  <BookOutlined />
+                  Evaluation Log
+                </Button>
+              </Link>
               <Link to="/skillsprogress">
                 <Button>
                   <BarChartOutlined />

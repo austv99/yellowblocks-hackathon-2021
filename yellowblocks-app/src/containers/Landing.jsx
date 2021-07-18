@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import AvatarUser from "../components/AvatarUser";
-import ipd from "../data/ipd.jpeg";
+// import ipd from "../data/ipd.jpeg";
 import aut from "../data/aut.png";
 import eye from "../data/eye.png";
 import fakekid from "../data/fakekid.jpeg";
@@ -9,7 +9,7 @@ import fakekid2 from "../data/z.jpeg";
 import { Link } from "react-router-dom";
 
 import SideBar from "../components/SideBar";
-import CourseCard from "../components/CourseCard";
+// import CourseCard from "../components/CourseCard";
 import { Space } from "antd";
 
 function HomePage() {
