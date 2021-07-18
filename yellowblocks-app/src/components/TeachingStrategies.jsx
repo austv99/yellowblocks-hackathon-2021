@@ -8,8 +8,27 @@ const { Panel } = Collapse;
 const type = {
   visual: (
     <div style={{ display: "flex" }}>
-      <EyeOutlined style={{ padding: "7px 5px 5px 5px" }} />
-      <h3>Visual Based</h3>
+      <h3>👁️ Visual Based</h3>
+    </div>
+  ),
+  choice: (
+    <div style={{ display: "flex" }}>
+      <h3>👐 Give Choices</h3>
+    </div>
+  ),
+  alt: (
+    <div style={{ display: "flex" }}>
+      <h3>💻 Writing Alternatives</h3>
+    </div>
+  ),
+  pair: (
+    <div style={{ display: "flex" }}>
+      <h3>👦👧 Pair Work</h3>
+    </div>
+  ),
+  fascination: (
+    <div style={{ display: "flex" }}>
+      <h3>🔥 Teach to Fascinations</h3>
     </div>
   ),
 };
@@ -94,7 +113,6 @@ function TeachingStrategies({ strategies }) {
           {strategies.map((s, idx) => (
             <>
               <Panel header={type[s.type]} key={idx}>
-                <p>{s.text}</p>
                 <p>{setDesc(s.type)}</p>
                 <h4>Comment by Ms May:</h4>
                 <p>{s.text}</p>

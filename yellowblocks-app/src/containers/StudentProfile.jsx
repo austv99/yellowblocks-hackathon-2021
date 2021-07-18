@@ -29,11 +29,7 @@ const progress = [
 const strategies = [
   {
     type: "visual",
-    text: "Lorem ipsum",
-  },
-  {
-    type: "visual",
-    text: "test",
+    text: "Loves working with picture books",
   },
 ];
 
