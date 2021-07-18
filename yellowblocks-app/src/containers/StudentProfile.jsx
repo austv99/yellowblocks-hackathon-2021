@@ -46,19 +46,23 @@ const comments = {
   parent: [
     {
       author: "Jenny Smith",
-      text: "Parent Lorem Ipsum",
+      text: "Joel loves watching Ben 10 so a good way to talk to him at times is to ask him about his favourite characters",
     },
   ],
   teacher: [
     {
       author: "Ms May",
-      text: "Teacher Lorem Ipsum",
+      text: "I find Joel to be working best when the general noise level of the room is not too loud and allows Joel to focus on his own tasks",
     },
   ],
   specialist: [
     {
       author: "Kevin Tran",
-      text: "Specialist Lorem Ipsum",
+      text: "The best way to introduce new information to Joel is to provide it to him in simple words and pictures.",
+    },
+    {
+      author: "Kevin Tran",
+      text: "2) I recommend giving Joel extra time for him to complete his homework and assignments ",
     },
   ],
 };

@@ -19,6 +19,9 @@ function App() {
           <Route exact path="/skillsprogress">
             <SkillsProgress />
           </Route>
+          <Route exact path="/skillsprogress">
+            <SkillsProgress />
+          </Route>
         </Switch>
       </Router>
     </AppContext.Provider>
